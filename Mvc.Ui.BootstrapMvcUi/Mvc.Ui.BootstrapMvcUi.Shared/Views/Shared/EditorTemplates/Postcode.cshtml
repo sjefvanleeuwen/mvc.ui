@@ -1,0 +1,13 @@
+﻿@using Mvc.Ui.BootstrapMvcUi
+@model string
+<div class="input-group">
+    @Html.TextBoxFor(m=>m, new { @class = "form-control" })
+</div>
+@using (Html.BeginScripts())
+{
+    <script>
+        $(function() {
+            $('#@Html.IdFor(m => m)').mask("9999 aa");
+        })
+    </script>
+}

@@ -1,0 +1,13 @@
+﻿@using Mvc.Ui.BootstrapMvcUi
+@model uint?
+<div class="input-group">
+    @Html.TextBoxFor(m=>m, new { @class = "form-control" })
+</div>
+@using (Html.BeginScripts())
+{
+    <script>
+        $(function() {
+            $('#@Html.IdFor(m => m)').numeric();
+        })
+    </script>
+}

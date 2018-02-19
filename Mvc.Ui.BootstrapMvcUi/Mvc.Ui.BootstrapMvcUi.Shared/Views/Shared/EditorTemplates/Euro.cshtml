@@ -1,0 +1,14 @@
+﻿@using Mvc.Ui.BootstrapMvcUi
+@model decimal?
+<div class="input-group">
+    <span class="input-group-addon">€</span>
+    @Html.TextBoxFor(m=>m, new { @class = "form-control" })
+</div>
+@using (Html.BeginScripts())
+{
+    <script>
+        $(function() {
+            $('#@Html.IdFor(m => m)').maskMoney({ thousands: '', decimal: ',', allowZero: true });
+        })
+    </script>
+}

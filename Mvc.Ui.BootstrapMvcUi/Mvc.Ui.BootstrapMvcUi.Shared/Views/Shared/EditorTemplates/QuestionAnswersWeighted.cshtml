@@ -1,0 +1,10 @@
+﻿@using Mvc.Ui.BootstrapMvcUi
+@model QuestionAnswersWeighted
+<div>@Model.Text</div>
+@foreach (var item  in Model)
+{
+    <div>
+        @Html.RadioButtonFor(m => item.Weight, new {@class = "form-control"})
+        @Html.DisplayTextFor(m => item.Text)
+    </div>
+}

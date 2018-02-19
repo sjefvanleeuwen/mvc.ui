@@ -1,0 +1,123 @@
+﻿
+@using Mvc.Ui.BootstrapMvcUi
+
+@model Mvc.Ui.BootstrapMvcUi.Shared.Models.BasicTypesModel
+@{
+    ViewBag.Title = "Basic Types Editor Templates";
+    Model.QaWeighted = new QuestionAnswersWeighted() {
+        new QuestionAnswerWeighted(){Text = "Weighted Question with answer 4", Weight = 4},
+        new QuestionAnswerWeighted(){Text = "Weighted Question with answer 1", Weight = 1},
+    };
+    Model.QaWeighted.Text = "Caption for weights";
+}
+@using (Html.BeginForm())
+{
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <h1>Mvc.Ui.BootstrapMvcUi</h1>
+        <p>
+            This is a template which shows what standard user interface controls are available in our applications running MVC Bootstrap as their frontend.
+        </p>
+        <ol>
+        </ol>
+    </div>
+    <div class="page-header">
+        <h2>Input fields basic types</h2>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Basic type bool</h3>
+        </div>
+        <div class="panel-body">
+            <div class="well">
+                <p>Default editor template for bool .NET</p>
+                <p>Example: @@Html.EditorFor(m=>m.Boolean)</p>
+            </div>
+            @Html.EditorFor(m => m.Boolean)
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Basic type DateTime?</h3>
+        </div>
+        <div class="panel-body">
+            <div class="well">
+                <p>Default editor template for DateTime?</p>
+                <p>Example: @@Html.EditorFor(m=>m.DateTime)</p>
+            </div>
+            @Html.EditorFor(m => m.DateTime)
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">DateTime? (Date without time selection)</h3>
+        </div>
+        <div class="panel-body">
+            <div class="well">
+                <p>Default editor template for DateTime?</p>
+                <p>Example: @@Html.EditorFor(m=>m.Datum,"Date")</p>
+            </div>
+            @Html.EditorFor(m => m.Date, "Date")
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">TimeSpan?</h3>
+        </div>
+        <div class="panel-body">
+            <div class="well">
+                <p>Datetime picker (time selection)</p>
+                <p>Example: @@Html.EditorFor(m=>m.TimeSpan)</p>
+            </div>
+            @Html.EditorFor(m => m.TimeSpan)
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Decimal? (Euro)</h3>
+        </div>
+        <div class="panel-body">
+            <div class="well">
+                <p>Euro masked input (maskMoney)</p>
+                <p>Example: @@Html.EditorFor(m=>m.Euro, "Euro")</p>
+            </div>
+            @Html.EditorFor(m => m.Euro, "Euro")
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Basictype uint?</h3>
+        </div>
+        <div class="panel-body">
+            <div class="well">
+                <p>Numeric input</p>
+                <p>Example: @@Html.EditorFor(m=>m.UInt, "UInt")</p>
+            </div>
+            @Html.EditorFor(m => m.UInt, "UInt")
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">string (Postcode)</h3>
+        </div>
+        <div class="panel-body">
+            <div class="well">
+                <p>Postcode masked input</p>
+                <p>Example: @@Html.EditorFor(m=>m.Postcode, "Postcode")</p>
+            </div>
+            @Html.EditorFor(m => m.Postcode, "PostCode")
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Weighted Question Answer</h3>
+        </div>
+        <div class="panel-body">
+            <div class="well">
+                <p>Example: @@Html.EditorFor(m => m.QaWeighted)</p>
+            </div>
+            @Html.EditorFor(m => m.QaWeighted)
+        </div>
+    </div>
+}

@@ -1,0 +1,18 @@
+﻿@using System
+@using Mvc.Ui.BootstrapMvcUi
+@model System.DateTime?
+<div class='input-group date' id='@Html.IdFor(m => m)'>
+    @Html.TextBoxFor(m => m, "{0:dd-MM-yyyy}", new { @class = "form-control input", data_date_format = "DD/MM/YYYY",/*@readonly="readonly"*/  })
+    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+</div>
+@using (Html.BeginScripts())
+{
+    <script type="text/javascript">
+        $(function() {
+            $('#@Html.IdFor(m => m)').datetimepicker({
+                pickTime: false,
+                language: "nl"
+            });
+        });
+    </script>
+}

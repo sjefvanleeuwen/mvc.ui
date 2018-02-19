@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Wigo4it.Mvc.Ui</id>
+    <version>1.0.0.1</version>
+    <title>MVC UI Bootstrap</title>
+    <authors>Sjef van LEeuwen</authors>
+    <owners>Sjef van Leeuwen</owners>
+    <projectUrl>https://github.com/sjefvanleeuwen/mvc.ui</projectUrl>
+    <iconUrl></iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Accelerator for building MVC bootstrap user interfaces</description>
+    <dependencies>
+      <dependency id="bootstrap" version="3.3.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="Content\bootstrap-datetimepicker.min.css" target="Content\Content\bootstrap-datetimepicker.min.css" />
+    <file src="Scripts\locale\bootstrap-datetimepicker\nl.js" target="Content\Scripts\locale\bootstrap-datetimepicker\nl.js" />
+    <file src="Scripts\bootstrap-datetimepicker.min.js" target="Content\Scripts\bootstrap-datetimepicker.min.js" />
+    <file src="Scripts\jquery.maskedinput.min.js" target="Content\Scripts\jquery.maskedinput.min.js" />
+    <file src="Scripts\jquery.maskMoney.min.js" target="Content\Scripts\jquery.maskMoney.min.js" />
+    <file src="Scripts\jquery.numeric.min.js" target="Content\Scripts\jquery.numeric.min.js" />
+    <file src="Scripts\moment.js" target="Content\Scripts\moment.js" />
+    <file src="Views\Shared\EditorTemplates\Date.cshtml" target="Content\Views\Shared\EditorTemplates\Date.cshtml" />
+    <file src="Views\Shared\EditorTemplates\DateTime.cshtml" target="Content\Views\Shared\EditorTemplates\DateTime.cshtml" />
+    <file src="Views\Shared\EditorTemplates\Euro.cshtml" target="Content\Views\Shared\EditorTemplates\Euro.cshtml" />
+    <file src="Views\Shared\EditorTemplates\Postcode.cshtml" target="Content\Views\Shared\EditorTemplates\Postcode.cshtml" />
+    <file src="Views\Shared\EditorTemplates\QuestionAnswersWeighted.cshtml" target="Content\Views\Shared\EditorTemplates\QuestionAnswersWeighted.cshtml" />
+    <file src="Views\Shared\EditorTemplates\TimeSpan.cshtml" target="Content\Views\Shared\EditorTemplates\TimeSpan.cshtml" />
+    <file src="Views\Shared\EditorTemplates\UInt.cshtml" target="Content\Views\Shared\EditorTemplates\UInt.cshtml" />
+    <file src="bin\Wigo4it.Mvc.Ui.Helpers.dll" target="lib\net40\Wigo4it.Mvc.Ui.Helpers.dll" />
+  </files>
+</package>
